@@ -1,6 +1,6 @@
 
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Tangerine:300);
 
 .login-page {
   position: center;
@@ -10,9 +10,13 @@
   margin: auto;
 }
 
-#main-body1 {
+.main-body1 {
   position: center;
   text-align: center;
+  font-style: Tangerine, 32px;
+  /* color:(rgb(57, 18, 233)); */
+  padding-top: 75px;
+  /* padding-bottom: 15px; */
 }
 .form {
   position: absolute;
@@ -20,7 +24,7 @@
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -39,7 +43,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: rgb(227, 167, 98);
+  background: rgb(226, 134, 28);
   width: 100%;
   border: 0;
   padding: 15px;
@@ -50,7 +54,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: rgb(228, 152, 39);
+  background:rgb(226, 134, 28);
 }
 .form .message {
   margin: 15px 0 0;
@@ -58,7 +62,7 @@
   font-size: 12px;
 }
 .form .message a {
-  color: rgb(228, 152, 39)
+  color: rgb(230, 169, 77)
   text-decoration: none;
 }
 .form .register-form {
@@ -99,10 +103,10 @@
 }
 body {
   background:  rgb(227, 167, 98); /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, rgb(227, 167, 98), rgb(226, 141, 43));
-  background: -moz-linear-gradient(right,  rgb(227, 167, 98), rgb(226, 141, 43));
-  background: -o-linear-gradient(right, rgb(227, 167, 98),  rgb(226, 141, 43));
-  background: linear-gradient(to left, rgb(227, 167, 98),  rgb(226, 141, 43));
+  background: -webkit-linear-gradient(right, rgb(226, 134, 28), rgb(230, 169, 77));
+  background: -moz-linear-gradient(right,  rgb(226, 134, 28), rgb(230, 169, 77));
+  background: -o-linear-gradient(right, rgb(226, 134, 28),  rgb(230, 169, 77));
+  background: linear-gradient(to left, rgb(226, 134, 28), rgb(230, 169, 77));
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
