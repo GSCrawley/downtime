@@ -16,7 +16,8 @@
   font-style: Tangerine, 32px;
   /* color:(rgb(57, 18, 233)); */
   padding-top: 75px;
-  /* padding-bottom: 15px; */
+  padding-bottom: 15px;
+  
 }
 .form {
   position: absolute;
@@ -24,7 +25,8 @@
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 15px;
+  padding: 45px;
+  padding-left: -15px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
