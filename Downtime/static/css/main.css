@@ -1,0 +1,66 @@
+body {
+  height: 3000px;
+}
+
+#myBtn {
+  position: relative;
+}
+
+#myBtn2 {
+  position: relative;
+}
+
+.nav-title {
+  position: relative;
+  top: 10px;
+  padding: 10px;
+}
+
+.search-bar {
+  margin-left: 100px;
+  position: relative;
+  top: -70px;
+  padding: 40px;
+}
+
+.button-center {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: relative
+  top: 50%;
+  left: 50%;
+  margin: 300px 0px 0px 500px;
+}
+
+.radio-points {
+  margin-top: -150px;
+  position: fixed;
+  padding: 40px;
+}
+
+/* margin: 25px 50px 75px 100px;
+top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px */
+
+.desc {
+  background-color: #494949;
+  margin: 900px 300px 300px;
+  /* margin-top: 1000px; */
+  padding: 150px;
+
+}
+
+.sign {
+  display: flex;
+  position: relative;
+  margin-top: -800px;
+  margin-left: 1300px;
+}
+
+.title-s3 {
+  margin-top: -1800px;
+  margin-left: 1300px;
+}
