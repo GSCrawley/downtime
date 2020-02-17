@@ -20,15 +20,13 @@
   
 }
 .form {
-  position: absolute;
+  position: center;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
-  padding-left: 45px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-left: -15px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
