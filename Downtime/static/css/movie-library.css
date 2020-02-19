@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .button-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .movies {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        margin-inline-start: 211px;
+        margin-top: 200px;
+        width: 1000px;
+        height:  300px;
+        margin-bottom: 50px;
+    }
+    
+    .music {
+        display: flex;
+        flex-direction: column;
+        padding: 104px;
+        margin-inline-start: 211px;
+        width: 1000px;
+        height: 300px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .books { 
+        display: flex;
+        flex-direction: column;
+        padding: 104px;
+        margin-inline-start: 211px;
+        width: 1000px;
+        height: 300px;
+        margin-top: 50px;
+        margin-bottom: 250px;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }

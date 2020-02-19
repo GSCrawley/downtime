@@ -20,7 +20,7 @@
   
 }
 .form {
-  position: absolute;
+  position: center;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
