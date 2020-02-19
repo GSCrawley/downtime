@@ -1,49 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    font-family: Helvetica;
+    font-size: 1em;
+    padding-top: 0px;
+    /* position: fixed; */
+}
+
 .navbar {
-display: flex;
-flex-direction: row;
+    display: grid;
+    grid-gap: 0;
+    padding-bottom: 20px;
+    padding: 0px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 'a . a3 a4'
+                         'b b2 b3 .'
+                         'c c c c';
+}
+
+.library-section {
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 42.5%;
+    width: 400px;
+    height:  100px;
 }
 
 .button-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    left: 651px;
+    font-size: 10px;
 }
 
-.movies {
-    display: flex;
-    flex-direction: column;
-    padding: 100px;
-    margin-inline-start: 211px;
-    margin-top: 200px;
-    width: 1000px;
-    height:  300px;
-    margin-bottom: 50px;
-}
-
-.music {
-    display: flex;
-    flex-direction: column;
-    padding: 104px;
-    margin-inline-start: 211px;
-    width: 1000px;
-    height: 300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.books { 
-    display: flex;
-    flex-direction: column;
-    padding: 104px;
-    margin-inline-start: 211px;
-    width: 1000px;
-    height: 300px;
-    margin-top: 50px;
-    margin-bottom: 250px;
-}
-
-footer {
+.bottom {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: 9px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
