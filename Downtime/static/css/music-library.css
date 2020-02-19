@@ -1,0 +1,70 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    }
+    
+    .button-section {
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+    
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .search-container {
+        float: right;
+    }
+
+    .navbar input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin: 8px;
+        margin-right: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar input[type=text], .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin:0;
+        padding: 14px;
+    }
+
+    .navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
+
+    .singles {
+        display: flex;
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 200px;
+        height: 500px;
+    }
+
+    .collections {
+        background-color:blueviolet;
+        width: 200px;
+        height: 500px;
+    }
+
+    .recommendations {
+        background-color: whitesmoke;
+        width: 200px;
+        height: 500px;
+    }
+

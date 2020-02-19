@@ -2,28 +2,40 @@
 <html>
     <head>
       <title>Movie Library</title>
-
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-      <!-- BOOTSTRAP THEME -->
-      <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
-
+      
       <!-- Custom Styles -->
       <link rel="stylesheet" type="text/css" href="../static/css/movie-library.css">
+
+      <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/33d47a7151.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <div class="navbar">
         <a class="active" href="#home">DownTime</a>
+          <div class="search">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
           <div class="button-section">
-            <button class="menu-button" id="add-new">add a new category</a>
-            <button class="menut-button" id="log-out">log out</a>
+            <button class="menu-button" id="add-new">Add new collection to library</a>
+            <button class="menut-button" id="log-out">Organize library by:</a>
           </div>
       </div>   
     </header>
     <main>
+      <div class="singles">
+        //
+      </div>
+      <div class="collections">
+        //
+      </div>
+      <div class="recommendations">
+        //
+      </div>
     </main>
     <footer>
       <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
