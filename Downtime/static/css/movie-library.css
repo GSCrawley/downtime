@@ -5,8 +5,25 @@ body {
     padding-top: 0px;
 }
 
-.gallery {
-    border: 1px solid lightgray;
+.single-items {
+    /* border: 1px solid lightgray; */
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+    padding-top: 100px;
+}
+
+.collections {
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+}
+
+.recommendations {
     padding: 1rem;
     display: flex;
     overflow-x: scroll;
