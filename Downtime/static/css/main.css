@@ -101,14 +101,14 @@ html, body, .holster {
 
 .container > div:nth-child(2) {
   background-image: url('../img/elcarito-MHNjEBeLTgw-unsplash.jpg');
-  background-color: #5DFDCB;
+  /* background-color: #5DFDCB; */
   background-size: 100%;
 }
 
 .container > div:nth-child(3) {
-  background-color: #87CCEA;
+  /* background-color: #87CCEA; */
   background-image: url('../img/ali-arif-soydas-3ICVaI2uzfE-unsplash.jpg');
-  background-size: 800px;
+  /* background-size: 800px; */
 }
 
 
@@ -189,7 +189,6 @@ h5 {
   font-weight: black;
   font-size: 80px;
   color: black;
-  /* word-spacing: normal; */
 }
 /* h2 {
   position: relative;
@@ -202,16 +201,12 @@ h5 {
   /* padding: 50px; */
 /* } */
 p {
-
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin: 100px;
   text-indent: 50px;
-  font-size: 20%;
-  line-height: 1;
-  font-weight: lighter;
-  font-family: 'Open Sans', ;
-  /* position: relative;
-  top: 100px;
-  left: 10px; */
-  width:75%;
-  font-size: 2em;
-
+  border: 3px dashed #1c87c9;
+  vertical-align: middle;
 }
