@@ -9,8 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" type="text/css" href="/Users/gideonscrawley/code/downtime/Downtime/static/css/music-library.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/music-library.css">
     
+    <script src="../static/css/audiojs/audio.min.js"></script>
+
+    <script>
+      audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+      });
+    </script>
+
+    <script type="text/javascript" src="../static/javascript/myscript.js"></script>
+
 
     <!-- Bootstrap CSS
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -19,7 +29,6 @@
     <!-- <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">  -->
 
     <!-- JavaScript -->
-    <!-- <script type="text/javascript" src="../static/javascript/myscript.js"></script> -->
 
    </head>
 
@@ -34,8 +43,16 @@
           </div>
       </div>   
     </header>
-
+   
     <main>
+      <div class="audiojs  " classname="audiojs" id="audiojs_wrapper0">
+        <audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto"></audio>          
+        <div class="play-pause"><p class="play"></p><p class="pause"></p><p class="loading"></p>
+          <p class="error"></p></div><div class="scrubber"><div class="progress" style="width: 4.37625px;"></div>             
+          <div class="loaded" style="width: 280px;"></div></div>
+          <div class="time"><em class="played">00:03</em>/<strong class="duration">03:56</strong></div>           
+          <div class="error-message"></div></div>
+          
     </main>
 
     <footer>
