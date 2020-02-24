@@ -5,6 +5,16 @@ body {
     padding-top: 0px;
 }
 
+.gallery {
+    border: 1px solid lightgray;
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+}
+
+
 .bottom {
     display: flex;
     flex-direction: row;
