@@ -5,57 +5,37 @@ body {
     padding-top: 0px;
 }
 
-.navbar {
-    position: relative;
-    left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .options {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
     width: 500px;
     height: 500px;
-    padding-top: 100px;
+    padding-top: 210px;
     position: relative;
+    padding-left: 100px;
     left:270px;
-}
-
-.menu-button {
-    display: flex;
-    flex-direction: row;
-    font-family: Helvetica;
-    font-size: 16px;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-    right: auto;
-
 }
 
 .movies {
     padding: 20px;
     width: 200px;
-    height:  200px;
+    height:  200px; 
+    font-size: 40px;
+
 }
 
 .music {
     width: 200px;
     height:  200px;
+    font-size:40px;
 }
 
 .books {
     width: 200px;
     height:  200px;
-}
-
-
-.button-section {
-    display: flex;
-    flex-direction: row;
-    font-size: 10px;
+    font-size:40px;
 }
 
 .bottom {
