@@ -1,39 +1,60 @@
 body {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
+    align-items: center;
     font-family: Helvetica;
     font-size: 1em;
     padding-top: 0px;
-    /* position: fixed; */
 }
 
 .navbar {
-    display: grid;
-    grid-gap: 0;
+    position: relative;
+    left: 20px;
+    padding-top: 20px;
     padding-bottom: 20px;
-    padding: 0px;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 'a . a3 a4'
-                         'b b2 b3 .'
-                         'c c c c';
 }
 
-.library-section {
+.options {
     display: flex;
     flex-direction: row;
-    margin-inline-start: 42.5%;
-    width: 400px;
-    height:  100px;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    padding-top: 100px;
+    position: relative;
+    left:270px;
 }
+
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    font-family: Helvetica;
+    font-size: 16px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    right: auto;
+
+}
+
+.movies {
+    padding: 20px;
+    width: 200px;
+    height:  200px;
+}
+
+.music {
+    width: 200px;
+    height:  200px;
+}
+
+.books {
+    width: 200px;
+    height:  200px;
+}
+
 
 .button-section {
     display: flex;
     flex-direction: row;
-    position: relative;
-    left: 651px;
     font-size: 10px;
 }
 
