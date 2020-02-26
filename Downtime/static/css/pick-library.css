@@ -5,37 +5,46 @@ body {
     padding-top: 0px;
 }
 
+.navbar-brand {
+    position: relative;
+    right: 40px;
+}
+
+.cc {
+  margin: 5px;
+  position: relative;
+  left: 90px;
+}
+
 .options {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-content: center;
-    width: 500px;
-    height: 500px;
     padding-top: 210px;
     position: relative;
-    padding-left: 100px;
     left:270px;
+    
 }
 
 .movies {
-    padding: 20px;
     width: 200px;
     height:  200px; 
     font-size: 40px;
-
+    margin: 10px;
 }
 
 .music {
     width: 200px;
     height:  200px;
     font-size:40px;
+    margin: 10px;
 }
 
 .books {
     width: 200px;
     height:  200px;
     font-size:40px;
+    margin: 10px;
 }
 
 .bottom {
@@ -48,4 +57,8 @@ body {
     width: 100%;
     left: 0;
     bottom: 0;
+}
+
+#button {
+    justify-content: space-between;
 }

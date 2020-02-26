@@ -5,8 +5,18 @@ body {
     padding-top: 0px;
 }
 
+.navbar-brand {
+    position: relative;
+    right: 40px;
+}
+
+.cc {
+    margin: 5px;
+    position: relative;
+    left: 90px;
+  }
+
 .single-items {
-    /* border: 1px solid lightgray; */
     padding: 1rem;
     display: flex;
     overflow-x: scroll;
