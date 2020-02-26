@@ -31,8 +31,9 @@ a {
     right: 10px;
     padding-left: 205px;
     padding-top: 10px;
+    color:(rgb(57, 18, 233));
 }
-
+/* 
 .form {
   position: center;
   z-index: 1;
@@ -115,7 +116,7 @@ a {
 }
 .container .info span .fa {
   color: #EF3B3A;
-}
+} */
 body {
   background:  rgb(227, 167, 98); /* fallback for old browsers */
   background: -webkit-linear-gradient(right, rgb(226, 134, 28), rgb(230, 169, 77));
