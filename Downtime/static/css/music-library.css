@@ -1,6 +1,6 @@
 
 
-@import url(https://fonts.googleapis.com/css?family=Tangerine:300);
+/* @import url(https://fonts.googleapis.com/css?family=Tangerine:300); */
 
 .navbar {
   position: center;
@@ -29,7 +29,7 @@ a {
     position: absolute;
     top: 20px;
     right: 10px;
-    padding-left: 72px;
+    padding-left: 205px;
     padding-top: 10px;
 }
 
