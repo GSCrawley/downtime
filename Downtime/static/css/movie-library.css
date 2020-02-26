@@ -5,9 +5,28 @@ body {
     padding-top: 0px;
 }
 
+h1 {
+    padding-top: 100px;
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
+h2 {
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
+h3 {
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
 .navbar-brand {
     position: relative;
-    right: 40px;
+    right: 60px;
 }
 
 .cc {
@@ -22,7 +41,6 @@ body {
     overflow-x: scroll;
     scroll-padding: 0 50%;
     scroll-snap-type: x mandatory;
-    padding-top: 100px;
 }
 
 .collections {
