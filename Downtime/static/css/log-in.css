@@ -64,9 +64,10 @@
   font-size: 12px;
 }
 .form .message a {
-  color: rgb(230, 169, 77)
+  color: rgb(230, 169, 77);
   text-decoration: none;
 }
+
 .form .register-form {
   display: none;
 }

@@ -58,15 +58,12 @@
 .form button:hover,.form button:active,.form button:focus {
   background:rgb(226, 134, 28);
 }
-.form .message {
+.form .message a {
   margin: 15px 0 0;
-  color: #b3b3b3;
+  color: rgb(230, 169, 77);
   font-size: 12px;
 }
-.form .message a {
-  color: rgb(230, 169, 77)
-  text-decoration: none;
-}
+  
 .form .register-form {
   display: none;
 }
