@@ -17,6 +17,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+.vscode
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -130,6 +131,7 @@ celerybeat.pid
 
 # Environments
 .env
+.envs
 .venv
 env/
 venv/

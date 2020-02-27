@@ -95,19 +95,19 @@ html, body, .holster {
 
 .container > div:nth-child(1) {
   /* background-color: #87CCEA; */
-  background-image: url('../img/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg');
+  background-image: url('../images/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg');
   background-size: 300px;
 }
 
 .container > div:nth-child(2) {
-  background-image: url('../img/elcarito-MHNjEBeLTgw-unsplash.jpg');
+  background-image: url('../images/elcarito-MHNjEBeLTgw-unsplash.jpg');
   /* background-color: #5DFDCB; */
   background-size: 100%;
 }
 
 .container > div:nth-child(3) {
   /* background-color: #87CCEA; */
-  background-image: url('../img/ali-arif-soydas-3ICVaI2uzfE-unsplash.jpg');
+  background-image: url('../images/ali-arif-soydas-3ICVaI2uzfE-unsplash.jpg');
   /* background-size: 800px; */
 }
 
