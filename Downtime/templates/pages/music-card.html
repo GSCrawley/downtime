@@ -1,5 +1,10 @@
 {% extends "base.html" %} {% load static %}
 
+<!-- Custom CSS -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/music-card.css" %}">
+{% endblock css %}
+
 <!-- Body -->
 {% block content %}
 <div class="container">
