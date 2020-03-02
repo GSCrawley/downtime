@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %}
+{% extends "base.html" %} {% load static i18n %}
 
 <!-- Custom CSS -->
 {% block css %}
@@ -80,19 +80,26 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <!-- Button trigger modal -->
-            <button
+            <a button
               type="button"
               class="btn btn-primary cc"
               data-toggle="modal"
               data-target="#exampleModal"
+              href="{% url "new_category" %}"
             >
               Add New Category
-            </button>
+            </a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-primary cc">
-              Logout
-            </button>
+            {% if request.user.is_authenticated %}
+              <a button type="button" class="btn btn-primary cc" href="{% url "account_logout" %}">
+                Logout
+              </a>
+            {% else %}
+              <a button type="button" class="btn btn-primary cc" href="{% url "account_login" %}">
+                Logout
+              </a>
+            {% endif %}
           </li>
         </ul>
       </div>
@@ -104,13 +111,17 @@
 <main>
   <div class="options">
     <div class="movies-section">
+<<<<<<< HEAD
       <button class="movies" href='../pages/movie-library.html'><span>MOVIES</span></button>
+=======
+      <a href="{% url "movie_library" %}"><button class="movies"><span>MOVIES</span></button></a>
+>>>>>>> cb2a48409206fade1bd0cf32e82e3dea04fd249c
     </div>
     <div class="music-section">
-      <button class="music"><span>MUSIC</span></button>
+      <a href="{% url "music_library" %}"><button class="music"><span>MUSIC</span></button></a>
     </div>
     <div class="books-section">
-      <button class="books"><span>BOOKS</span></button>
+      <a href="{% url "book_library" %}"><button class="books"><span>BOOKS</span></button></a>
     </div>
   </div>
 </main>
