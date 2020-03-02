@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- Custom CSS -->
+{% block css %}
+<link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+{% endblock css %}
+
+<!-- Body -->
+{% block content %}
+<div class="holster">
+  <div class="container y mandatory-scroll-snapping" dir="ltr">
+    <div class="snap-ele">
+
+      <!-- Logo -->
+      <div class="logo-box">
+        <h1 class="logo">Downtime</h1>
+      </div>
+
+      <!-- Navbar -->
+      <div class="nav-title">
+        <h3 class="sub-title">Add your to-do, to-read, and to-see list and access them easily</h3>
+        <!-- <a class="navbar-brand" href="#"></a> -->
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-center">
+        <a button type="button" class="btn btn-primary">Logo</button>
+        <a button type="button" class="btn btn-secondary" href="{% url "account_signup" %}">Sign up</button>
+        <a button type="button" class="btn btn-success" href="{% url "account_login" %}">Log in</button>
+        {% comment %} <button onclick="scrollToSlide1()" id="myBtn2">ScrollDownToSlide2</button> {% endcomment %}
+      </div>
+
+      <!-- Radios -->
+      {% comment %}
+      <div class="radio-points">
+        <input type="radio" name="slide" value="1" onclick="scrollToSlide1()"><br>
+        <input type="radio" name="slide" value="2" onclick="scrollToSlide1()"><br>
+        <input type="radio" name="slide" value="3" onclick="scrollToSlide1()">
+      </div>
+      {% endcomment %}
+
+      <!-- Information Grid -->
+      <h2>Be downtimer.</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <i class="fas fa-file-video"></i>
+          <h5 class="icon-header">Watch it later</h5>
+        </div>
+
+        <div class="grid-item">
+          <i class="fas fa-headphones"></i>
+          <h5 class="icon-header">Listen when you're in the mood</h5>
+        </div>
+
+        <div class="grid-item">
+          <i class="fas fa-book"></i>
+          <h5 class="icon-header">Read when you have time</h5>
+        </div>
+
+        <div class="grid-item">
+          <i class="fas fa-utensils"></i>
+          <h5 class="icon-header">Eat when you crave it</h5>
+        </div>
+      </div>
+
+      <!-- Information -->
+      <h2>Save it for later!</h2>
+      <p>
+        Ever took a screen shot of a book from Google, and lose it
+        in your gallery. Well we say no more :) Internet Explorer 8
+        and earlier versions do not support the :nth-child() selector.
+        Using a formula (an + b). Description: a represents a cycle size,
+        n is a counter (starts at 0), and b is an offset value. Here, we
+        specify a background color for all p elements whose index is a
+        multiple of 3:
+      </p>
+      <hr class="my-4">
+      {% comment %} <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> {% endcomment %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

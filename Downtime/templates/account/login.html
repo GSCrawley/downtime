@@ -1,0 +1,42 @@
+{% extends "account/base.html" %}
+
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{% static "css/login.css" %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<style>
+  .a, .navbar-brand {
+    /* font-family: "Tangerine", serif;
+      font-size: 68px; */
+      color:(rgb(57, 18, 233))
+  }
+</style>
+
+<!-- Title -->
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+<!-- Inner Body -->
+{% block inner %}
+<h1>{% trans "Sign In" %}</h1>
+<div class="main-body1">
+
+  <!-- Navbar -->
+  <div class="nav-title">
+    <a class="navbar-brand" href="{% url "index" %}">Welcome to DOWNTIME</a>
+  </div>
+
+  <!-- Login Form -->
+  <form class="login-page" method="POST" action="{% url "account_login" %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <a class="button secondaryAction" href="{% url "account_reset_password" %}">{% trans "Forgot Password?" %}</a>
+    <button class="primaryAction btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+  </form>
+
+</div>
+{% endblock inner %}

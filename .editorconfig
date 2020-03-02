@@ -1,0 +1,36 @@
+# Check http://editorconfig.org for more information
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.{py,pyi,rst,ini}]
+indent_style = space
+indent_size = 4
+
+[*.py]
+line_length = 80
+known_first_party = downtime
+multi_line_output = 3
+default_section = THIRDPARTY
+recursive = true
+skip = .env/
+skip_glob = **/migrations/*.py
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+
+[*.{html,css,scss,json,yml}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
