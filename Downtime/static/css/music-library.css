@@ -2,15 +2,15 @@
 
 /* @import url(https://fonts.googleapis.com/css?family=Tangerine:300); */
 
-.navbar {
+/* .navbar {
   position: center;
   vertical-align: middle;
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
-}
+} */
 
-.active, .navbar {
+/* .active, .navbar {
   position: center;
   text-align: center;
   font-style: Tangerine, px;
@@ -18,19 +18,19 @@
   padding-top: 75px;
   padding-bottom: 15px;
   
-}
+} */
+
 
 a {
   position: relative;
   
 }
 
-.button-section {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    padding-left: 205px;
-    padding-top: 10px;
+.button {
+    /* top: 20px;
+    right: 10px; */
+    /* padding-left: 205px; */
+    padding: 20px;
     color:(rgb(57, 18, 233));
 }
 /* 
