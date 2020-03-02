@@ -1,5 +1,10 @@
 {% extends "base.html" %} {% load static %}
 
+<!-- Custom CSS -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/music-library.css" %}">
+{% endblock css %}
+
 <!-- Body -->
 {% block content %}
 <div class="button-section">
@@ -18,12 +23,17 @@
   <div class="row">
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
+<<<<<<< HEAD
         <a href=""../templates/music-card.html">
           <img class="card-img-top" src="http://placehold.it/700x400" alt=""
+=======
+        <a href="{% url "music_card" %}"
+          ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
+>>>>>>> c96c6b86b0ff7fea176e5699652100371fb3d6d2
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project One</a>
+            <a href="{% url "music_card" %}">Project One</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
@@ -37,12 +47,12 @@
 
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="../templates/music-card.html"
+        <a href="{% url "music_card" %}"
           ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project Two</a>
+            <a href="{% url "music_card" %}">Project Two</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
@@ -53,12 +63,12 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="../templates/music-card.html"
+        <a href="{% url "music_card" %}"
           ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project Three</a>
+            <a href="{% url "music_card" %}">Project Three</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
@@ -72,12 +82,12 @@
 
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="../templates/music-card.html"
+        <a href="{% url "music_card" %}"
           ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project Four</a>
+            <a href="{% url "music_card" %}">Project Four</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
@@ -88,12 +98,12 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="../templates/music-card.html"
+        <a href="{% url "music_card" %}"
           ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project Five</a>
+            <a href="{% url "music_card" %}">Project Five</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
@@ -105,12 +115,12 @@
 
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="../templates/music-card.html"
+        <a href="{% url "music_card" %}"
           ><img class="card-img-top" src="http://placehold.it/700x400" alt=""
         /></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="../templates/music-card.html">Project Six</a>
+            <a href="{% url "music_card" %}">Project Six</a>
           </h4>
           <p class="card-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
