@@ -19,6 +19,26 @@ urlpatterns = [
         TemplateView.as_view(template_name="pages/pick-library.html"),
         name="library",
     ),
+    path(
+        "library/new/",
+        TemplateView.as_view(template_name="pages/create-collection.html"),
+        name="new_category",
+    ),
+    path(
+        "library/music/",
+        TemplateView.as_view(template_name="pages/music-library.html"),
+        name="music_library",
+    ),
+    path(
+        "library/movies/",
+        TemplateView.as_view(template_name="pages/movie-library.html"),
+        name="movie_library",
+    ),
+    path(
+        "library/books/",
+        TemplateView.as_view(template_name="pages/book-library.html"),
+        name="book_library",
+    ),
     # User management
     path(
         "users/",
