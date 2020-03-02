@@ -30,14 +30,29 @@ urlpatterns = [
         name="music_library",
     ),
     path(
+        "library/music/card",
+        TemplateView.as_view(template_name="pages/music-card.html"),
+        name="music_card",
+    ),
+    path(
         "library/movies/",
         TemplateView.as_view(template_name="pages/movie-library.html"),
         name="movie_library",
     ),
     path(
+        "library/movies/card",
+        TemplateView.as_view(template_name="pages/movie-card.html"),
+        name="movie_card",
+    ),
+    path(
         "library/books/",
         TemplateView.as_view(template_name="pages/book-library.html"),
         name="book_library",
+    ),
+    path(
+        "library/books/card",
+        TemplateView.as_view(template_name="pages/book-card.html"),
+        name="book_card",
     ),
     # User management
     path(
