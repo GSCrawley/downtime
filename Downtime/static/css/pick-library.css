@@ -20,27 +20,27 @@ body {
     font-family: 'Press Start 2P';
     padding-top: 310px;
     position: relative;
-    left:580px;  
+    left:500px;  
 }
 
 .movies {
-    width: 250px;
-    height:  250px; 
-    font-size: 34px;
+    width: 300px;
+    height:  300px; 
+    font-size: 44px;
     text-shadow: 2px 2px #9e1dfa;
 }
 
 .music {
-    width: 250px;
-    height:  250px; 
-    font-size: 34px;
+    width: 300px;
+    height:  300px; 
+    font-size: 44px;
     text-shadow: 2px 2px #9e1dfa;
 }
 
 .books {
-    width: 250px;
-    height:  250px; 
-    font-size: 34px;
+    width: 300px;
+    height:  300px; 
+    font-size: 44px;
     text-shadow: 2px 2px #9e1dfa;
 }
 
