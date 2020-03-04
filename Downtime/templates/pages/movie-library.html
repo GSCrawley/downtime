@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %}
+{% extends "base.html" %} {% load static i18n %}
 
 <!-- Custom CSS -->
 {% block css %}
@@ -7,91 +7,34 @@
 
 <!-- Body -->
 {% block content %}
+<!-- Header -->
 <header>
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">
-            Add a new library category!
-          </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="inputName">Title:</label>
-              <input
-                type="category"
-                class="form-control"
-                id="inputCategory"
-                aria-describedby="categorayName"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Downtime</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" href="{% url "main:index" %}">Downtime</a>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button
+            <a button
               type="button"
               class="btn btn-primary cc"
-              data-toggle="modal"
-              data-target="#exampleModal"
+              href="{% url "main:movie-create" %}"
             >
-              Add New Collection
-            </button>
+              New Entry
+            </a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-primary cc">
-              Search Collection
-            </button>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-primary cc">
-              Order
-            </button>
+            {% if request.user.is_authenticated %}
+              <a button type="button" class="btn btn-primary cc" href="{% url "account_logout" %}">
+                Logout
+              </a>
+              <a button type="button" class="btn btn-primary cc" href="{% url "users:detail" request.user.username  %}">{% trans "My Profile" %}</a>
+            {% else %}
+              <a button type="button" class="btn btn-primary cc" href="{% url "account_login" %}">
+                Login
+              </a>
+            {% endif %}
           </li>
         </ul>
       </div>
@@ -102,34 +45,20 @@
 <main>
   <div class="row">
     <ul class="single-items">
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="{% url "movie_card" %}">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="{% url "movie_card" %}">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="{% url "movie_card" %}">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="{% url "movie_card" %}">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="{% url "movie_card" %}">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
-        </a>
-      </div>
+      {% if movie %}
+        {% for i in movie %}
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="{{ i.get_absolute_url }}">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+          </a>
+        </div>
+        {% endfor %}
+      {% else %}
+      <p>This library is empty.</p>
+      {% endif %}
     </ul>
   </div>
-  <div class="row">
+  {% comment %} <div class="row">
     <ul class="collections">
       <div class="col-md-3 col-sm-6 mb-4">
         <a href="{% url "movie_card" %}">
@@ -157,8 +86,8 @@
         </a>
       </div>
     </ul>
-  </div>
-  <div class="row">
+  </div> {% endcomment %}
+  {% comment %} <div class="row">
     <ul class="recommendations">
       <div class="col-md-3 col-sm-6 mb-4">
         <a href="{% url "movie_card" %}">
@@ -186,7 +115,7 @@
         </a>
       </div>
     </ul>
-  </div>
+  </div> {% endcomment %}
 </main>
 <footer class="bottom">
   <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
