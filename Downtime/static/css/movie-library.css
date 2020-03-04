@@ -1,6 +1,5 @@
 body {
     align-items: center;
-    font-family: Helvetica;
     font-size: 1em;
     padding-top: 0px;
 }
@@ -26,7 +25,10 @@ h3 {
 
 .navbar-brand {
     position: relative;
-    right: 60px;
+    right: 330px;
+    font-size: 60px;
+    font-family: 'Fjalla One';
+    text-shadow: 2px 2px #ff3535;
 }
 
 
@@ -40,7 +42,7 @@ h3 {
 .cc {
     margin: 5px;
     position: relative;
-    left: 90px;
+    left: 460px;
   }
 
 .single-items {
