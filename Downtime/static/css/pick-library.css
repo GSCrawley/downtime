@@ -16,7 +16,6 @@ body {
     display: flex;
     flex-direction: row;
     align-content: center;
-    /* font-family: 'Press Start 2P'; */
     font-family: 'Fjalla One';
     padding-top: 310px;
     position: relative;

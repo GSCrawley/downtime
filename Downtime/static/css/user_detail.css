@@ -16,4 +16,40 @@ body {
     margin: 5px;
     position: relative;
     left: 500px;
+    font-size: 20px;
+    width: 900px;
+    height: 100px;
+    margin: 0px auto;
+    position: relative;
+    align-items: center;
+}
+
+.row {
+    position: relative;
+    left: 400px;
+    top:200px;
+}
+
+.rowuser {
+    position: relative;
+    left: 100px;
+    top: 150px;   
+}
+
+.userbuttons {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Fjalla One';
+    position: relative;
+    left: -300px;
+    padding: 20px;
+}
+
+.myinfo {
+    width: 299px;
+    height: 299px; 
+    font-size: 60px;
+    align-content: space-between;
+    text-shadow: 2px 2px #1a191a;
+    border-radius: 28px; 
 }

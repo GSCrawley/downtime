@@ -55,9 +55,9 @@
     {% endfor %}
   {% endif %}
 
-  <div class="row">
+  <div class="rowuser">
     <div class="col-sm-12">
-      <h2>{{ object.username }}</h2>
+      <h2>Welcome {{ object.username }}!</h2>
       {% if object.name %}
         <p>{{ object.name }}</p>
       {% endif %}
@@ -67,10 +67,10 @@
 {% if object == request.user %}
 <!-- Action buttons -->
 <div class="row">
-  <div class="col-sm-12">
-    <a class="btn btn-success btn-lg cc" href="{% url "users:update" %}" role="button">My Info</a>
-    <a class="btn btn-success btn-lg cc" href="{% url "account_email" %}" role="button">E-Mail</a>
-    <a class="btn btn-success btn-lg cc" href="{% url "library" %}" role="button">My Library</a>
+  <div class="userbuttons">
+    <a class="myinfo btn btn-primary" href="{% url "users:update" %}" role="button">My Info</a>
+    <a class="myinfo btn btn-primary" href="{% url "account_email" %}" role="button">E-Mail</a>
+    <a class="myinfo btn btn-primary" href="{% url "library" %}" role="button">My Library</a>
   </div>
 
 </div>
