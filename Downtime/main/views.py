@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render
 from main.models import Movie, Music, Book
-from django.views.generic import CreateView, DeleteView, DetailView, ListView
+from django.views.generic import CreateView, DetailView, ListView
 
 
 class MovieLibraryView(ListView):
@@ -43,6 +43,12 @@ class MusicDetailView(DetailView):
         return render(request, "pages/music-card.html", {"music": music})
 
 
+class MusicCreateView(CreateView):
+    model = Music
+    fields = "__all__"
+    template_name = "pages/music-form.html"
+
+
 class BookLibraryView(ListView):
     model = Book
 
@@ -58,3 +64,9 @@ class BookDetailView(DetailView):
     def get(self, request, slug):
         book = self.get_queryset().get(slug__iexact=slug)
         return render(request, "pages/book-card.html", {"book": book})
+
+
+class BookCreateView(CreateView):
+    model = Book
+    fields = "__all__"
+    template_name = "pages/book-form.html"
