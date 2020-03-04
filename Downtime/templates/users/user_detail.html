@@ -1,19 +1,25 @@
 {% extends "base.html" %}
 {% load static i18n %}
 
+<!-- Custom CSS -->
+{% block css %}
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static "css/user_detail.css" %}">
+{% endblock css %}
 <!-- Title -->
 {% block title %}{{ object.username }}'s Profile{% endblock %}
 
 <!-- Body -->
 {% block content %}
-<div class="container">
+<!-- <div class="container"> -->
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{% url "main:index" %}">Downtime</a>
+    <a class="navbar-brand" href="{% url "main:index" %}">DownTime</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -39,7 +45,7 @@
           </li>
         {% endif %}
       </ul>
-    </div>
+    <!-- </div> -->
   </nav>
 
   <!-- Messages -->
@@ -49,9 +55,9 @@
     {% endfor %}
   {% endif %}
 
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>{{ object.username }}</h2>
+  <div class="rowuser">
+    <div class="col-lg-12">
+      <h2>Welcome {{ object.username }}!</h2>
       {% if object.name %}
         <p>{{ object.name }}</p>
       {% endif %}
@@ -61,18 +67,29 @@
 {% if object == request.user %}
 <!-- Action buttons -->
 <div class="row">
-
-  <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url "users:update" %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url "account_email" %}" role="button">E-Mail</a>
-    <a class="btn btn-primary" href="{% url "main:library" %}" role="button">My Library</a>
-  </div>
+  <!-- <div class="userbuttons"> -->
+    <div class= "info-section">
+      <a class="myinfo btn btn-primary" href="{% url "users:update" %}" role="button">My Info</a>
+    </div>
+    <div class= "email-section">
+      <a class="myinfo btn btn-primary" href="{% url "account_email" %}" role="button">E-Mail</a>
+    </div>
+    <div class = libary-section>
+      <a class="myinfo btn btn-primary" href="{% url "main:library" %}" role="button">My Library</a>
+    </div>
+  <!-- </div> -->
 
 </div>
 <!-- End Action buttons -->
 {% endif %}
 
-
+<!-- Footer -->
+<footer class="bottom">
+    <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
+    <a href="terms">Terms</a>
+    <a href="privacy">Privacy</a>
+    <a href="help">Help</a>
+  </footer>
 </div>
 {% endblock content %}
 

@@ -2,6 +2,8 @@
 
 <!-- Custom CSS -->
 {% block css %}
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static "css/music-library.css" %}">
 {% endblock css %}
 
@@ -75,32 +77,69 @@
       <p>This library is empty.</p>
     {% endif %}
   </div>
-  <!-- /.row -->
-
-  <!-- Pagination -->
-  <ul class="pagination justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">1</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">3</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</div>
-<!-- /.container -->
+  {% comment %} <div class="row">
+    <ul class="collections">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+    </ul>
+  </div>
+  <div class="row">
+    <ul class="recommendations">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+    </ul>
+  </div> {% endcomment %}
+</main>
+<footer class="bottom">
+  <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
+  <a href="terms">Terms</a>
+  <a href="privacy">Privacy</a>
+  <a href="help">Help</a>
+</footer>
 {% endblock content %}

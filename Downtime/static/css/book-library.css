@@ -1,0 +1,109 @@
+body {
+    align-items: center;
+    font-size: 1em;
+    padding-top: 0px;
+}
+
+h1 {
+    padding-top: 100px;
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
+h2 {
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
+h3 {
+    position:relative;
+    left: 49px;
+    font-size: 1em;
+}
+
+.navbar-brand {
+    position: relative;
+    right: 330px;
+    font-size: 60px;
+    font-family: 'Fjalla One';
+    text-shadow: 2px 2px #ff3535;
+}
+
+
+.searchbox {
+    margin: 5px;
+    padding-top: 10px;
+    position: relative;
+    left: 90px;
+}
+
+.cc {
+    margin: 5px;
+    position: relative;
+    left: 360px;
+  }
+
+.single-items {
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+}
+
+.collections {
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+}
+
+.recommendations {
+    padding: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    scroll-padding: 0 50%;
+    scroll-snap-type: x mandatory;
+}
+
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 9px;
+    align-items: baseline;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+form.searchbox input[type=text] {
+    padding: 0px;
+    float: left;
+    width: 89%;
+    background: #f1f1f1;
+  }
+
+form.searchbox button {
+    float: left;
+    margin: 9px;
+    background: #2196F3;
+    border: 1px solid grey;
+    border-left: none; 
+    cursor: pointer;
+  }
+  
+  form.searchbox button:hover {
+    background: #0b7dda;
+  }
+
+  form.searchbox::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
