@@ -1,243 +1,216 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "base.html" %} {% load static i18n %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Custom CSS -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Trade+Winds|Simonetta&display=swap" rel="stylesheet">
+{% endblock css %}
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/33d47a7151.js" crossorigin="anonymous"></script>
+<!-- Title -->
+{% block title %}Down Time{% endblock title %}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Trade+Winds|Simonetta&display=swap" rel="stylesheet">
+<!-- Body -->
+{% block content %}
+<div class="container">
+  <div id="a" class="a">
+    <h1 data-aos="fade-up"> <strong>Down Time</strong></h1>
 
-    <!-- Imported Styles  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <a button type="button" class="logIn btn btn-primary cc" href="{% url "account_login" %}">Log in</a>
+    <a button type="button" class="signUp btn btn-primary cc" href="{% url "account_signup" %}">Sign up</a>
+  </div>
 
-    <!-- Animate -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-    <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" type="text/css" href="../../static/css/main.css">
-
-    <title>Down Time</title>
-  </head>
-  <body>
-
-    <!-- Dc's suggestion: 1. make Home clickbale -->
-
-
-    <div class="container">
-      <div id="a" class="a">
-        <h1 data-aos="fade-up"> <strong>Down Time</strong></h1>
-
-        <button class='logIn' type="button" name="button">LogIn</button>
-        <button class='signUp' type="button" name="button">SignUp</button>
-        <!-- <span class="hero_scroll">
-          Scroll Down
-          <br>
-          <i class="fas fa-chevron-down che"></i>
-        </span> -->
-      </div>
-
-      <div id="b" class="b parallax">
-        <div class="about-page">
-          <section class="about-downtime">
-            <h3>Down Time</h3>
-              <p>
-                To keep track of what to read <span style="color:blue;"> (Novels, Literature, Articles, News, ...)</span>,
-                watch <span style="color:blue;">(Movies, Shows, ....)</span>, listen<span style="color:blue;">(Music, Podcast, ...)</span>,
-                recipe <span style="color:blue;">(Healthy Recipes, Desset Recipes, ...)</span>, or events <span style="color:blue;">(Conference, Holiday Parties, ...)</span> ….. in the future.
-                Get recommendation based on history.
-                No more screenshots. No more forgetting.
-              </p>
-          </section>
-
-        </div>
-
-
-        <div class="serve">
-            <div class='rec' data-aos="fade-up">
-                Recommendations
-            </div>
-            <div class='near' data-aos="fade-left">
-                Nearest pickup's
-            </div>
-            <div class='orga' data-aos="fade-right">
-                Organized List
-            </div>
-        </div>
-
-        <div class="serve-right">
-            <div class='rec2' data-aos="fade-up">
-                List your cravings
-            </div>
-
-            <div class='near2' data-aos="fade-left">
-                Reminder
-            </div>
-
-            <div class='orga2' data-aos="fade-right">
-                Connect
-            </div>
-        </div>
-
-
-      </div>
-      <div id="c" class="c">
-        <!-- your latest list -->
-        <section>
-            <h5>Your latest list</h5>
-        </section>
-
-        <div class="flex-container items">
-            <div class='u' data-aos="fade-up">Movies
-              <i class="fas fa-theater-masks"></i>
-            </div>
-            <div class='w' data-aos="fade-left">Songs
-              <i class="fas fa-music"></i>
-            </div>
-            <div class='x' data-aos="fade-right">Books
-              <i class="fas fa-book-reader"></i>
-            </div>
-            <div class='y' data-aos="fade-down">Podcast
-              <i class="fas fa-podcast"></i>
-            </div>
-            <div class='z' data-aos="fade-up">Recipe
-              <i class="fas fa-utensils"></i>
-            </div>
-        </div>
-
-
-      <div class="grid-container">
-          <div class="grid-item mov-a" style= "grid-area: a;"></div>
-          <div class="grid-item song-b" style= "grid-area: b;"></div>
-          <div class="grid-item book-c" style= "grid-area: c;"></div>
-          <div class="grid-item pod-d" style= "grid-area: d;"></div>
-          <div class="grid-item rec-e" style= "grid-area: e;"></div>
-
-          <div class="grid-item mov-f" style= "grid-area: f;"></div>
-          <div class="grid-item song-g" style= "grid-area: g;"></div>
-          <div class="grid-item book-h" style= "grid-area: h;"></div>
-          <div class="grid-item pod-i" style= "grid-area: i;"></div>
-          <div class="grid-item rec-j" style= "grid-area: j;"></div>
-
-          <div class="grid-item mov-g" style= "grid-area: k;"></div>
-          <div class="grid-item song-l" style= "grid-area: l;"></div>
-          <div class="grid-item book-m" style= "grid-area: m;"></div>
-          <div class="grid-item pod-n" style= "grid-area: n;"></div>
-          <div class="grid-item rec-o" style= "grid-area: o;"></div>
-
-
-      </div>
-
-      </div>
+  <div id="b" class="b parallax">
+    <div class="about-page">
+      <section class="about-downtime">
+        <h3>Down Time</h3>
+          <p>
+            To keep track of what to read <span style="color:blue;"> (Novels, Literature, Articles, News, ...)</span>,
+            watch <span style="color:blue;">(Movies, Shows, ....)</span>, listen<span style="color:blue;">(Music, Podcast, ...)</span>,
+            recipe <span style="color:blue;">(Healthy Recipes, Desset Recipes, ...)</span>, or events <span style="color:blue;">(Conference, Holiday Parties, ...)</span> ….. in the future.
+            Get recommendation based on history.
+            No more screenshots. No more forgetting.
+          </p>
+      </section>
 
     </div>
 
-    <div class="nav-bar">
-      <a id="a" class='first' href="#a">Home</a>
-      <a id="b" class='second' href="#b">About</a>
-      <a id="c" class='third' href="#c">Service</a>
+
+    <div class="serve">
+        <div class='rec' data-aos="fade-up">
+            Recommendations
+        </div>
+        <div class='near' data-aos="fade-left">
+            Nearest pickup's
+        </div>
+        <div class='orga' data-aos="fade-right">
+            Organized List
+        </div>
     </div>
 
-    <!-- ***** Imported Scripts ***** -->
+    <div class="serve-right">
+        <div class='rec2' data-aos="fade-up">
+            List your cravings
+        </div>
 
-    <!-- Animate On Scroll -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Waypoints -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
-    <!-- Smooth Scroll -->
-    <script src="smoothscroll.js"></script>
+        <div class='near2' data-aos="fade-left">
+            Reminder
+        </div>
 
-
-    <!-- ***** Your Scripts ***** -->
-
-    <script>
-      // --------------------------------------------
-      // Initialize Animate On Scroll
-      AOS.init();
-
-      // --------------------------------------------
-      // Waypoints
-
-      ['a', 'b', 'c'].forEach(function(id) {
-        new Waypoint({
-          element: document.getElementById(id),
-          handler: function() {
-            selectNav('#'+id)
-          }
-        })
-      })
-
-      // -------------------------------------------
-      // Show the selected nav link
-
-      function selectNav(id) {
-        const navLinks = document.querySelectorAll('.nav-bar > a')
-
-        navLinks.forEach(function(link) {
-          if (link.getAttribute('href') === id) {
-            link.classList.add('selected')
-          } else {
-            link.classList.remove('selected')
-          }
-        })
-      }
-
-      // -------------------------------------------
-      // Scroll to Smooth
-
-      {
-        // Block Scoped!!!!!
-        const pi = 3.14 // immutable does not chnage
-        // pi = 14.3 // error!
-        let time = 0 // mutable
-        time += 1 // can change
-
-        console.log(time * pi)
-      }
-
-      // console.log(time * pi)
+        <div class='orga2' data-aos="fade-right">
+            Connect
+        </div>
+    </div>
 
 
-    // Get a reference to the body
-    const body = document.querySelector('body')
-    // Listen for clicks
-    body.addEventListener('click', function(e) {
-      console.log(e.target)
+  </div>
+  <div id="c" class="c">
+    <!-- your latest list -->
+    <section>
+        <h5>Your latest list</h5>
+    </section>
 
-      // If a link has external class ignore it
-      if (e.target.matches('.external')) {
-        return
-      }
+    <div class="flex-container items">
+        <div class='u' data-aos="fade-up">Movies
+          <i class="fas fa-theater-masks"></i>
+        </div>
+        <div class='w' data-aos="fade-left">Songs
+          <i class="fas fa-music"></i>
+        </div>
+        <div class='x' data-aos="fade-right">Books
+          <i class="fas fa-book-reader"></i>
+        </div>
+        <div class='y' data-aos="fade-down">Podcast
+          <i class="fas fa-podcast"></i>
+        </div>
+        <div class='z' data-aos="fade-up">Recipe
+          <i class="fas fa-utensils"></i>
+        </div>
+    </div>
 
-      // Prevent the default behavior
-      e.preventDefault()
-      // e.stopPropagation()
 
-      // Prepare to scroll
-      // Get the href from the target
-      const href = e.target.closest('a').href
-      if (href) {
-        // Select the current link
-        selectNav(href)
-        // Scroll to the id that matches the href
-        const id = href.split('#')[1]
-        document.getElementById(id).scrollIntoView({
-          behavior: 'smooth'
-        });
+  <div class="grid-container">
+      <div class="grid-item mov-a" style= "grid-area: a;"></div>
+      <div class="grid-item song-b" style= "grid-area: b;"></div>
+      <div class="grid-item book-c" style= "grid-area: c;"></div>
+      <div class="grid-item pod-d" style= "grid-area: d;"></div>
+      <div class="grid-item rec-e" style= "grid-area: e;"></div>
+
+      <div class="grid-item mov-f" style= "grid-area: f;"></div>
+      <div class="grid-item song-g" style= "grid-area: g;"></div>
+      <div class="grid-item book-h" style= "grid-area: h;"></div>
+      <div class="grid-item pod-i" style= "grid-area: i;"></div>
+      <div class="grid-item rec-j" style= "grid-area: j;"></div>
+
+      <div class="grid-item mov-g" style= "grid-area: k;"></div>
+      <div class="grid-item song-l" style= "grid-area: l;"></div>
+      <div class="grid-item book-m" style= "grid-area: m;"></div>
+      <div class="grid-item pod-n" style= "grid-area: n;"></div>
+      <div class="grid-item rec-o" style= "grid-area: o;"></div>
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="nav-bar">
+  <a id="a" class='first' href="#a">Home</a>
+  <a id="b" class='second' href="#b">About</a>
+  <a id="c" class='third' href="#c">Service</a>
+</div>
+
+<!-- Javascript -->
+{% block javascript %}
+<!-- Animate On Scroll -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<!-- Smooth Scroll -->
+<script src="smoothscroll.js"></script>
+
+
+<!-- ***** Your Scripts ***** -->
+
+<script>
+  // --------------------------------------------
+  // Initialize Animate On Scroll
+  AOS.init();
+
+  // --------------------------------------------
+  // Waypoints
+
+  ['a', 'b', 'c'].forEach(function(id) {
+    new Waypoint({
+      element: document.getElementById(id),
+      handler: function() {
+        selectNav('#'+id)
       }
     })
-    </script>
+  })
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+  // -------------------------------------------
+  // Show the selected nav link
+
+  function selectNav(id) {
+    const navLinks = document.querySelectorAll('.nav-bar > a')
+
+    navLinks.forEach(function(link) {
+      if (link.getAttribute('href') === id) {
+        link.classList.add('selected')
+      } else {
+        link.classList.remove('selected')
+      }
+    })
+  }
+
+  // -------------------------------------------
+  // Scroll to Smooth
+
+  {
+    // Block Scoped!!!!!
+    const pi = 3.14 // immutable does not chnage
+    // pi = 14.3 // error!
+    let time = 0 // mutable
+    time += 1 // can change
+
+    console.log(time * pi)
+  }
+
+  // console.log(time * pi)
+
+
+// Get a reference to the body
+const body = document.querySelector('body')
+// Listen for clicks
+body.addEventListener('click', function(e) {
+  console.log(e.target)
+
+  // If a link has external class ignore it
+  if (e.target.matches('.external')) {
+    return
+  }
+
+  // Prevent the default behavior
+  e.preventDefault()
+  // e.stopPropagation()
+
+  // Prepare to scroll
+  // Get the href from the target
+  const href = e.target.closest('a').href
+  if (href) {
+    // Select the current link
+    selectNav(href)
+    // Scroll to the id that matches the href
+    const id = href.split('#')[1]
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+})
+</script>
+{% endblock javascript %}
+{% endblock content %}
