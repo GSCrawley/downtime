@@ -1,178 +1,197 @@
-<!doctype html>
-<html>
-    <head>
-      <title>Movie Library</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+{% extends "base.html" %} {% load static %}
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-        
-        <!-- Custom Styles -->
-        <link rel="stylesheet" type="text/css" href="../static/css/movie-library.css">
-        <title>Movie Library</title>
-  </head>
-  <body>
-      <header>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Add a new library category!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-                  </div>
-                  <div class="modal-body">
-                  <form>
-                      <div class="form-group">
-                          <label for="inputName">Title:</label>
-                          <input type="category" class="form-control" id="inputCategory" aria-describedby="categorayName">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                  </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-              </div>
-              </div>
-          </div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-              <div class="container">
-                  <a class="navbar-brand" href="#">Down Time</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarResponsive">
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <form class="searchbox" action="action_page.php">
-                              <input type="text" placeholder="Search.." name="search">
-                              <button type="submit"><i class="fa fa-search"></i></button>
-                              </form>
-                          </li>
-                          <li class="nav-item">
-                            <button type="button" class="btn btn-primary cc" data-toggle="modal" data-target="#exampleModal">
-                              Add New Collection
-                            </button>
-                          </li>
-                          <li class="nav-item">
-                            <button type="button" class="btn btn-primary cc">
-                              Order
-                            </button>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </header>
-      <main>
-      <div class="row">
-        <h1>Singles</h1>
-        <ul class="single-items">
-          <div class="col-md-3 col-sm-6 mb-4">
-              <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-              </a>
-            </div> 
-            <div class="col-md-3 col-sm-6 mb-4">
-              <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-              </a>
+<!-- Custom CSS -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static "css/movie-library.css" %}">
+{% endblock css %}
+
+<!-- Body -->
+{% block content %}
+<header>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Add a new library category!
+          </h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="inputName">Title:</label>
+              <input
+                type="category"
+                class="form-control"
+                id="inputCategory"
+                aria-describedby="categorayName"
+              />
             </div>
-            <div class="col-md-3 col-sm-6 mb-4">
-              <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-              </a>
-            </div> 
-            <div class="col-md-3 col-sm-6 mb-4">
-              <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-              </a>
-            </div>  
-            <div class="col-md-3 col-sm-6 mb-4">
-              <a href="#">
-                <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-              </a>
-          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Downtime</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button
+              type="button"
+              class="btn btn-primary cc"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Add New Collection
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary cc">
+              Search Collection
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary cc">
+              Order
+            </button>
+          </li>
         </ul>
       </div>
-      <div class="row">
-          <h2>Collections</h2>
-          <ul class="collections">
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div> 
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div> 
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div>  
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-          </ul>
-        </div>
-      <div class="row">
-        <h3>Recommendations</h3>
-          <ul class="recommendations">
-            <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div> 
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div>
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div> 
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-              </div>  
-              <div class="col-md-3 col-sm-6 mb-4">
-                <a href="#">
-                  <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-          </ul>
-        </div>
-      </main>
-      <footer class="bottom">
-      <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
-      <a href="terms">Terms</a>
-      <a href="privacy">Privacy</a>
-      <a href="help">Help</a>
-    </footer>
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
-  </body>
-</html>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="row">
+    <ul class="single-items">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+    </ul>
+  </div>
+  <div class="row">
+    <ul class="collections">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+    </ul>
+  </div>
+  <div class="row">
+    <ul class="recommendations">
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <a href="{% url "movie_card" %}">
+          <img class="img-fluid" src="http://placehold.it/500x300" alt="" />
+        </a>
+      </div>
+    </ul>
+  </div>
+</main>
+<footer class="bottom">
+  <p>&copy; 2020 DownTime, Inc. All rights reserved.</p>
+  <a href="terms">Terms</a>
+  <a href="privacy">Privacy</a>
+  <a href="help">Help</a>
+</footer>
+{% endblock content %}

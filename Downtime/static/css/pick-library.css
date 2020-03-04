@@ -1,50 +1,43 @@
 body {
     align-items: center;
-    font-family: Helvetica;
     font-size: 1em;
     padding-top: 0px;
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar-brand {
+    font-size: 49px;
+    font-family: 'Fjalla One';
     position: relative;
-    right: 40px;
-}
-
-.cc {
-  margin: 5px;
-  position: relative;
-  left: 90px;
+    right: -40px;
 }
 
 .options {
     display: flex;
     flex-direction: row;
     align-content: center;
-    padding-top: 210px;
+    font-family: 'Press Start 2P';
+    padding-top: 310px;
     position: relative;
-    left:270px;
-    
+    left:580px;  
 }
 
 .movies {
-    width: 200px;
-    height:  200px; 
-    font-size: 40px;
-    margin: 10px;
+    width: 250px;
+    height:  250px; 
+    font-size: 34px;
 }
 
 .music {
-    width: 200px;
-    height:  200px;
-    font-size:40px;
-    margin: 10px;
+    width: 250px;
+    height:  250px; 
+    font-size: 34px;
 }
 
 .books {
-    width: 200px;
-    height:  200px;
-    font-size:40px;
-    margin: 10px;
+    width: 250px;
+    height:  250px; 
+    font-size: 34px;
 }
 
 .movies, .music, .books {
@@ -58,7 +51,7 @@ body {
     flex-direction: row;
     justify-content: center;
     font-size: 9px;
-    align-items: center;
+    align-items: baseline;
     position: fixed;
     width: 100%;
     left: 0;
@@ -66,5 +59,7 @@ body {
 }
 
 #button {
+    position: relative;
+    left: 300px;
     justify-content: space-between;
 }
