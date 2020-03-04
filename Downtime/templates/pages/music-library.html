@@ -2,6 +2,8 @@
 
 <!-- Custom CSS -->
 {% block css %}
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static "css/music-library.css" %}">
 {% endblock css %}
 
@@ -57,7 +59,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container">
       <a class="navbar-brand" href="#">Downtime</a>
       <button
@@ -76,7 +78,7 @@
           <li class="nav-item">
             <button
               type="button"
-              class="btn btn-primary cc"
+              class="btn btn-success btn-lg cc"
               data-toggle="modal"
               data-target="#exampleModal"
             >
@@ -84,12 +86,12 @@
             </button>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-primary cc">
+            <button type="button" class="btn btn-success btn-lg cc">
               Search Collection
             </button>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-primary cc">
+            <button type="button" class="btn btn-success btn-lg cc">
               Order
             </button>
           </li>

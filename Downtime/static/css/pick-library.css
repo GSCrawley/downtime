@@ -2,7 +2,6 @@ body {
     align-items: center;
     font-size: 1em;
     padding-top: 0px;
-    background-color: rgba(255, 231, 255, 0.927);
 }
 
 .navbar-brand {
@@ -17,7 +16,8 @@ body {
     display: flex;
     flex-direction: row;
     align-content: center;
-    font-family: 'Press Start 2P';
+    /* font-family: 'Press Start 2P'; */
+    font-family: 'Fjalla One';
     padding-top: 310px;
     position: relative;
     left:500px; 
@@ -26,7 +26,7 @@ body {
 .movies {
     width: 299px;
     height: 299px; 
-    font-size: 40px;
+    font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
     border-radius: 28px; 
 }
@@ -34,7 +34,7 @@ body {
 .music {
     width: 299px;
     height: 299px; 
-    font-size: 40px;
+    font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
     border-radius: 28px;
 }
@@ -42,7 +42,7 @@ body {
 .books {
     width: 299px;
     height: 299px; 
-    font-size: 40px;
+    font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
     border-radius: 28px;
 }
