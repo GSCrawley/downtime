@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static i18n %}
 
+<!-- Custom CSS -->
+{% block css %}
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static "css/user_detail.css" %}">
+{% endblock css %}
 <!-- Title -->
 {% block title %}{{ object.username }}'s Profile{% endblock %}
 
@@ -9,7 +15,7 @@
 <div class="container">
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -61,11 +67,10 @@
 {% if object == request.user %}
 <!-- Action buttons -->
 <div class="row">
-
   <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url "users:update" %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url "account_email" %}" role="button">E-Mail</a>
-    <a class="btn btn-primary" href="{% url "library" %}" role="button">My Library</a>
+    <a class="btn btn-success btn-lg cc" href="{% url "users:update" %}" role="button">My Info</a>
+    <a class="btn btn-success btn-lg cc" href="{% url "account_email" %}" role="button">E-Mail</a>
+    <a class="btn btn-success btn-lg cc" href="{% url "library" %}" role="button">My Library</a>
   </div>
 
 </div>
