@@ -31,7 +31,7 @@
 <div>
     <form class="my-5 py-5 mx-5 px-5" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_p|crispy }}
         <input type="submit" value="Submit" />
     </form>
 </div>
