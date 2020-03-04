@@ -2,14 +2,15 @@ body {
     align-items: center;
     font-size: 1em;
     padding-top: 0px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 231, 255, 0.927);
 }
 
 .navbar-brand {
-    font-size: 49px;
+    font-size: 60px;
     font-family: 'Fjalla One';
+    text-shadow: 2px 2px #ff3535;
     position: relative;
-    right: -40px;
+    right: -60px;
 }
 
 .options {
@@ -26,18 +27,21 @@ body {
     width: 250px;
     height:  250px; 
     font-size: 34px;
+    text-shadow: 2px 2px #9e1dfa;
 }
 
 .music {
     width: 250px;
     height:  250px; 
     font-size: 34px;
+    text-shadow: 2px 2px #9e1dfa;
 }
 
 .books {
     width: 250px;
     height:  250px; 
     font-size: 34px;
+    text-shadow: 2px 2px #9e1dfa;
 }
 
 .movies, .music, .books {
@@ -58,8 +62,8 @@ body {
     bottom: 0;
 }
 
-#button {
+.cc {
+    margin: 5px;
     position: relative;
-    left: 300px;
-    justify-content: space-between;
-}
+    left: -20px;
+  }

@@ -84,7 +84,7 @@
             <!-- Button trigger modal -->
             <a button
               type="navbutton"
-              class="btn btn-primary"
+              class="btn btn-primary cc"
               data-toggle="modal"
               data-target="#exampleModal"
               href="{% url "new_category" %}"
@@ -94,11 +94,11 @@
           </li>
           <li class="nav-item">
             {% if request.user.is_authenticated %}
-              <a button type="navbutton" class="btn btn-primary" href="{% url "account_logout" %}">
+              <a button type="navbutton" class="btn btn-primary cc" href="{% url "account_logout" %}">
                 Logout
               </a>
             {% else %}
-              <a button type="navbutton" class="btn btn-primary" href="{% url "account_login" %}">
+              <a button type="navbutton" class="btn btn-primary cc" href="{% url "account_login" %}">
                 Logout
               </a>
             {% endif %}
