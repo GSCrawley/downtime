@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 
+{% load static i18n %}
+
+<!-- Custom CSS -->
+{% block css %}
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static "css/user_detail.css" %}">
+{% endblock css %}
+
+
 {% block title %}{{ user.username }}{% endblock %}
 
 {% block content %}
-  <h1>{{ user.username }}</h1>
+  <h1>Hello {{ user.username }}! Need to update username?</h1>
   <form class="form-horizontal" method="post" action="{% url "users:update" %}">
     {% csrf_token %}
     {{ form|crispy }}
@@ -15,3 +25,4 @@
     </div>
   </form>
 {% endblock %}
+

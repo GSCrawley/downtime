@@ -54,3 +54,22 @@ body {
     padding-right: 10px;
     margin: 5px;
 }
+
+
+h1 {
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+.controls {
+    position: relative;
+    left: - 100px;
+    top: 0px;
+}
+
+.form-horizontal{
+    position: relative;
+    left: 100px;
+    top: 120px;
+}
