@@ -9,13 +9,13 @@ body {
     font-family: 'Fjalla One';
     text-shadow: 2px 2px #ff3535;
     position: relative;
-    right: -60px;
+    right: -150px;
 }
 
 .navbar-nav {
     margin: 5px;
     position: relative;
-    left: 500px;
+    left: 900px;
     font-size: 20px;
     width: 900px;
     height: 100px;
@@ -25,31 +25,32 @@ body {
 }
 
 .row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    font-family: 'Fjalla One';
+    padding-top: 310px;
     position: relative;
-    left: 400px;
-    top:200px;
+    left:500px;
 }
 
 .rowuser {
     position: relative;
-    left: 100px;
-    top: 150px;   
-}
-
-.userbuttons {
-    display: flex;
-    flex-direction: row;
-    font-family: 'Fjalla One';
-    position: relative;
-    left: -300px;
-    padding: 20px;
+    left: 150px;
+    top: 50px;
 }
 
 .myinfo {
     width: 299px;
     height: 299px; 
     font-size: 60px;
-    align-content: space-between;
+    font-family: 'Fjalla One';
     text-shadow: 2px 2px #1a191a;
+    position: relative;
+    left: 20px;
+    padding: 20px;
     border-radius: 28px; 
+    padding: 10px;
+    padding-right: 10px;
+    margin: 5px;
 }
