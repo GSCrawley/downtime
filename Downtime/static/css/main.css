@@ -1,212 +1,402 @@
-html, body, .holster {
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-  word-spacing: 3px;
-}
-
-.logo {
-  font-family: Anton;
-  margin: 25px;
-  padding: 25px;
-  font-weight:bold;
-  font-size: 80px;
-  color: black;
-}
-
-.logo-box {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background: grey;
-  width: 50%;
-  height: 20%;
-}
-
-.sub-title {
-  font-family: Lacquer;
-  font-size: 30px;
-  font-weight: bolder;
-  color: #FFFFFA;
-  margin: 20px;
-}
-
-
-.holster {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
-  width: 100%;
+body, html {
   height: 100%;
 }
+
+body {
+  margin: 0;
+  font-family: 'Trade Winds';
+}
+
 
 
 .container {
-  display: flex;
-  overflow: auto;
-  outline: 1px;
-  flex: none;
-}
-
-.container.x {
-  width: 100%;
   height: 100%;
-  flex-flow: row nowrap;
-}
-
-.container.y {
-  width: 100%;
-  height: 100%;
-  flex-flow: column nowrap;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-
-}
-
-
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
 }
 
 .container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
-}
-
-
-
-.y.container > div {
-  line-height: 100%;
-  font-size: 128px;
-  width: 100%;
   height: 100%;
-}
-/* appearance fixes */
-/* .y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
-} */
-/* coloration */
-
-.container > div:nth-child(1) {
-  /* background-color: #87CCEA; */
-  background-image: url('../images/aliis-sinisalu-yzVxz_OYVxU-unsplash.jpg');
-  background-size: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container > div:nth-child(2) {
-  background-image: url('../images/elcarito-MHNjEBeLTgw-unsplash.jpg');
-  /* background-color: #5DFDCB; */
-  background-size: 100%;
+h1 {
+  position: absolute;
+  padding: 0.5em;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  font-family: 'Trade Winds';
+  font-weight: bold;
+  font-size: 80px;
 }
 
-.container > div:nth-child(3) {
-  /* background-color: #87CCEA; */
-  background-image: url('../images/ali-arif-soydas-3ICVaI2uzfE-unsplash.jpg');
-  /* background-size: 800px; */
-}
-
-
-.nav-title {
+.logIn {
   position: relative;
-  top: 10px;
-  padding: 10px;
+  right: 350px;
+  bottom: 50px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background-color: #7e0cf5;
+  color: white;
+  font-size: 18px;
+}
+
+.signUp {
+  position: relative;
+  bottom: 350px;
+  left: 250px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  background-color: #7e0cf5;
+  color: white;
+  font-size: 18px;
+
+}
+
+.a span {
+  position: absolute;
+  top: 500px;
+  left: 600px;
+  color: #7e0cf5;
+  font-family: 'Helvetica';
+  font-weight: bolder;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.a span i {
+  position: relative;
+  left: 70px;
+  font-size: 30px;
 }
 
 
-.button-center {
+.hero_scroll .che {
+  display: block;
+  margin-top: 20px;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: pulse;
+}
+
+
+div .about {
+  /* padding: 7em; */
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: 'Trade Winds';
+  font-size: 50px;
+}
+
+.serve {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  margin-top:10%;
-}
-
-.radio-points {
-  margin-top: -150px;
-  position: fixed;
-  padding: 40px;
-}
-
-.sign {
-  display: flex;
   position: relative;
-  margin-top: -800px;
-  margin-left: 1300px;
+  left: -400px;
 }
 
 
-
-.container-place {
-  display: flex;
-  flex-direction: row;
-}
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  /* background-color: #2196F3; */
-  padding: 50px;
-  position: relative;
-  top: 0px;
-  left:100px;
-  width: 80%;
-}
-
-.grid-item {
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
-  padding: 20px;
+.serve > div {
+  /* flex-grow: 1; */
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
   font-size: 30px;
-  text-align: center;
+  position: relative;
+  top: 150px;
+  white-space: nowrap
+
 }
 
-i {
-  font-size: 4em;
-  color: #9000B3;
-  /* weight: bold; */
+.serve>div:nth-child(even) {
+  background: #9951ff;
+}
+
+.serve>div:nth-child(odd) {
+  background: #45eba5;
+}
+
+
+.serve-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -100px;
+}
+
+
+.serve-right > div {
+  background: purple;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+  top: 150px;
+  left: 0;
+  white-space: nowrap
+}
+
+.serve-right>div:nth-child(even) {
+  background: #fd0054;
+}
+
+.serve-right>div:nth-child(odd) {
+  background: #f8b500;
+}
+
+.items {
+  margin-bottom: 50px;
+  position: relative;
+  left: 330px;
+  top: -60px;
+}
+
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  border-radius: 25px;
+  /* background-color: #f1f1f1; */
+
+  margin: 10px;
+  padding: 50px;
+  font-size: 30px;
+  margin-top: auto;
+}
+
+.main-comp-a {
+  padding: 5em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.main-comp-b {
+  padding: 5em;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.a {
+  /* background-color: cadetblue; */
+  background-image: url("../images/Anna-Hurley.png");
+  background-position: center;
+  background-size: cover;
+
+}
+
+.b {
+
+  background-image: url("../images/mandancing.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.c {
+  /* background-image: url("../img/dog.png");
+  background-position: center;
+  background-size: cover; */
+  background-color: #57007e;
+}
+
+
+
+
+.u {
+  background-color: cornflowerblue;
+}
+
+.w {
+  background-color: goldenrod;
+}
+
+.x {
+  background-color: darkseagreen;
+}
+
+.y {
+  background-color: cadetblue;
+}
+
+.z {
+  background-color: indianred;
+}
+
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-bar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar > a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+a.selected {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+
+.about-downtime {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  left: 100px;
+  top: -150px;
+  font-size: 20px;
+  color: black;
+  width: 100%;
+}
+
+.about-downtime > p {
+  font-family: 'Helvetica';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+section {
+  margin: 0;
+  padding: 0;
 }
 
 h5 {
-  color: #A50104;
-  font-family: 'Oswald', ;
-  font-weight: bold;
+  font-family: 'Simonetta', ;
+  position: relative;
+  left: 800px;
+  top: -300px;
+  text-align: center;
+  width: 400px;
+  font-size: 30px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+
 }
 
-.snap-ele > h2 {
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(5, 2fr);
+  grid-template-rows: repeat(3, 2fr); */
+  /* grid-template-areas:
+    'a a a a a a a'
+    'b b j c d k q'
+    'b b f g h i r'
+    'e u f g h i s'
+    'l l o p m n t'; */
+
+  grid-template-areas:
+  'a b c d e'
+  'f g h i j'
+  'k l m n o';
+
+  grid-gap: 20px 40px;
+  background-color: purple;
   position: relative;
-  top: 50px;
-  margin: 10px;
-  padding: 20px;
-  font-family: 'Roboto', ;
-  font-weight: black;
-  font-size: 80px;
-  color: black;
+  left: -750px;
+  top: 200px;
 }
-/* h2 {
-  position: relative;
-  top: 100px;
-  left: 200px;
-  text-align: center; */
-  /* background-color: yellow; */
-  /* width: 50%; */
-  /* margin: 10px; */
-  /* padding: 50px; */
-/* } */
-p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  padding: 20px;
-  margin: 100px;
-  text-indent: 50px;
-  border: 3px dashed #1c87c9;
-  vertical-align: middle;
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  /* padding: 60px; */
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+.grid-item {
+  color: #612147;
+  background-size: cover;
+}
+
+.mov-a {
+  background-image: url(../images/curious-case-of-benjamin-button-the-1440x960.jpg);
+}
+
+.mov-f {
+  background-image: url(../images/avatar.jpg);
+}
+
+.mov-g {
+  background-image: url(../images/summer.jpg);
+}
+
+.song-b {
+  background-image: url(../images/love-yourz-j-cole-2014-forest-hills-d-2-0-9374861.png);
+}
+
+.song-g {
+  background-image: url(../images/ifIwereaboy.jpg);
+}
+
+.song-l {
+  background-image: url(../images/onthefloor.jpg);
+}
+
+
+.book-c {
+  background-image: url(../images/dertogada.jpg);
+}
+
+.book-h {
+  background-image: url(../img/adapt.jpg);
+}
+
+.book-m {
+  background-image: url(../images/claudesteele.jpg);
+}
+
+.pod-d {
+  background-image: url(../images/The-Dropout-hed.jpg);
+}
+
+.pod-i {
+  background-image: url(../images/reveal.jpg);
+}
+
+.pod-n {
+  background-image: url(../images/nprmoney.jpg);
+}
+
+.rec-e {
+  background-image: url(../images/doro.jpg);
+}
+
+.rec-j {
+  background-image: url(../images/burrito.jpg);
+}
+
+.rec-o {
+  background-image: url(../images/steak.jpeg);
+}
+
+.grid-itemh {
+  color: #24009c;
+  font-weight: bold;
 }
