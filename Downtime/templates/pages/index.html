@@ -200,15 +200,15 @@ body.addEventListener('click', function(e) {
 
   // Prepare to scroll
   // Get the href from the target
-  const href = e.target.closest('a').href
-  if (href) {
-    // Select the current link
-    selectNav(href)
-    // Scroll to the id that matches the href
-    const id = href.split('#')[1]
-    document.getElementById(id).scrollIntoView({
-      behavior: 'smooth'
-    });
+  // const href = e.target.closest('a').href
+  // if (href) {
+  //   // Select the current link
+  //   selectNav(href)
+  //   // Scroll to the id that matches the href
+  //   const id = href.split('#')[1]
+  //   document.getElementById(id).scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
   }
 })
 </script>
