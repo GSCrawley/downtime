@@ -10,12 +10,12 @@ urlpatterns = [
     # Main Pages
     path(
         "",
-        include("downtime.main.urls", namespace="main"),
+        include("main.urls", namespace="main"),
     ),
     # User management
     path(
         "users/",
-        include("downtime.users.urls", namespace="users"),
+        include("users.urls", namespace="users"),
     ),
     path(
         "accounts/",

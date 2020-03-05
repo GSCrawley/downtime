@@ -1,8 +1,8 @@
 import pytest
 from django.test import RequestFactory
 
-from downtime.users.models import User
-from downtime.users.views import UserRedirectView, UserUpdateView
+from users.models import User
+from users.views import UserRedirectView, UserUpdateView
 
 pytestmark = pytest.mark.django_db
 
