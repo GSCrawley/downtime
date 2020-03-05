@@ -19,20 +19,20 @@ body {
     font-family: 'Fjalla One';
     padding-top: 310px;
     position: relative;
-    left:-100px; 
+    left: 500px;
 }
 
 .movies {
     width: 299px;
-    height: 299px; 
+    height: 299px;
     font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
-    border-radius: 28px; 
+    border-radius: 28px;
 }
 
 .music {
     width: 299px;
-    height: 299px; 
+    height: 299px;
     font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
     border-radius: 28px;
@@ -40,7 +40,7 @@ body {
 
 .books {
     width: 299px;
-    height: 299px; 
+    height: 299px;
     font-size: 60px;
     text-shadow: 2px 2px #9e1dfa;
     border-radius: 28px;
