@@ -7,7 +7,7 @@ import environ
 ROOT_DIR = (
     environ.Path(__file__) - 3
 )  # (downtime/config/settings/base.py - 3 = downtime/)
-APPS_DIR = ROOT_DIR.path("downtime")
+APPS_DIR = ROOT_DIR.path("Downtime")
 
 env = environ.Env()
 
@@ -68,8 +68,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "downtime.users.apps.UsersConfig",
-    "downtime.main.apps.MainConfig",
+    "Downtime.users.apps.UsersConfig",
+    "Downtime.main.apps.MainConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
