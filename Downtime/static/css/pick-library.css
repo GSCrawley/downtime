@@ -19,7 +19,7 @@ body {
     font-family: 'Fjalla One';
     padding-top: 310px;
     position: relative;
-    left:500px; 
+    left:-100px; 
 }
 
 .movies {
