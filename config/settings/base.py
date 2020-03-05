@@ -76,7 +76,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # MIGRATIONS
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "downtime.contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "contrib.sites.migrations"}
 
 # AUTHENTICATION
 # https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
@@ -169,7 +169,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "downtime.utils.context_processors.settings_context",
+                "utils.context_processors.settings_context",
             ],
         },
     },
