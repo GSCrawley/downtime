@@ -14,8 +14,7 @@ FRAMEWORKS
 		• (placeholder)
 		• (placeholder)
 
-ROLES
-
+ROLE
 Top role is the team member’s primary role, if the member has more than one role.
 
 Sandy:
