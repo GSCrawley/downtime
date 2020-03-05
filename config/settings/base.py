@@ -68,8 +68,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-#    "users.apps.UsersConfig",
-    "main.apps.MainConfig",
+    "downtime.users.apps.UsersConfig",
+    "downtime.main.apps.MainConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
