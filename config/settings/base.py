@@ -7,7 +7,7 @@ import environ
 ROOT_DIR = (
     environ.Path(__file__) - 3
 )  # (downtime/config/settings/base.py - 3 = downtime/)
-APPS_DIR = ROOT_DIR.path("Downtime")
+APPS_DIR = ROOT_DIR.path("downtime")
 
 env = environ.Env()
 
@@ -68,15 +68,15 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "Downtime.users.apps.UsersConfig",
-    "Downtime.main.apps.MainConfig",
+    "downtime.users.apps.UsersConfig",
+    "downtime.main.apps.MainConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # MIGRATIONS
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
-MIGRATION_MODULES = {"sites": "contrib.sites.migrations"}
+MIGRATION_MODULES = {"sites": "downtime.contrib.sites.migrations"}
 
 # AUTHENTICATION
 # https://docs.djangoproject.com/en/dev/ref/settings/#authentication-backends
@@ -169,7 +169,7 @@ TEMPLATES = [
                 "django.template.context_processors.static",
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
-                "utils.context_processors.settings_context",
+                "downtime.utils.context_processors.settings_context",
             ],
         },
     },
@@ -242,6 +242,6 @@ ACCOUNT_EMAIL_REQUIRED = True
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "none"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "downtime.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "downtime.users.adapters.SocialAccountAdapter"
